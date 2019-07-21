@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -258,13 +258,13 @@ body {
 })().load({
 	imgdata:[
 		// north
-		{img:'imgs/1.jpg', x:-1000, y:0, z:1500, nx:0, nz:1},
-		{img:'imgs/2.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
-		{img:'imgs/3.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
+		{img:'imgs/01.jpg', x:-1000, y:0, z:1500, nx:0, nz:1},
+		{img:'imgs/02.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
+		{img:'imgs/03.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
 		// east
-		{img:'imgs/4.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
-		{img:'imgs/5.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
-		{img:'imgs/6.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
+		{img:'imgs/04.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
+		{img:'imgs/05.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
+		{img:'imgs/06.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
 		// south
 		{img:'imgs/7.jpg', x:1000,  y:0, z:-1500, nx:0, nz:-1},
 		{img:'imgs/8.jpg', x:0,     y:0, z:-1500, nx:0, nz:-1},
@@ -373,7 +373,7 @@ body {
 <body >
 	 <!-- Header -->
     <div class="nav">
-        <a class="logo" href="index.html"><img src="style/images/logo.png" width="40" title="红"></a>
+        <a class="logo" href="index.html"><img src="style/images/logo.png" width="40" title="CIE2019"></a>
          <span id="site_runtime" style="color:white; font-size: xx-small; align-content: center;" ></span>
         <a class="logo pull-right sobtn"><span class="glyphicon glyphicon-search" style="color: #B4B4B4;"></span></a>
     </div>
@@ -382,17 +382,17 @@ body {
 <script src="/follow.js" type="text/javascript"></script>
 </div>
 
-<canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用谷歌浏览器。</canvas>
+<canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用新版谷歌浏览器。</canvas>
 
     <!--
-    	作者：15249239025@163.com
-    	时间：2019-04-18
+    	作者：540470452@qq.com.com
+    	时间：2019-07-18
     	描述：时间
     -->
     <script type="text/javascript">
     function show_site_runtime(){
 	window.setTimeout("show_site_runtime()",1000); // 每秒运行一次函数
-	X=new Date("04/10/2019 00:00:00"); //在这里修改你的建站时间
+	X=new Date("07/18/2019 00:00:00"); //在这里修改你的建站时间
 	Y=new Date();
 	T=(Y.getTime()-X.getTime()); // 获取当前时间与指定时间之间的时间间隔（ms）	
 	i=24*60*60*1000;
@@ -404,7 +404,7 @@ body {
 	M=Math.floor(m); // 计算剩余不足一小时的分钟数并向下取整
 	s=(m-M)*60;
 	S=Math.floor(s); // 计算剩余不足一分钟的秒数并向下取整
-	site_runtime.innerHTML="现在是："+ Y+ "<br>" +"网站已平稳运行："+D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 ";
+	site_runtime.innerHTML="现在是："+ Y +"网站已平稳运行："+D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 ";
     }
 	show_site_runtime();
 </script>
