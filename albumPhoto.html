@@ -86,60 +86,118 @@
 			width: 450px;
 		}
 	</style>
+	<script type="text/javascript">
+		function doAddDiv(){
+			//创建代码片段
+			var fragment = document.createDocumentFragment();
+			for(var i = 0; i < 150; i ++){
+				//创建div
+				var ele = document.createElement("div");
+				for(var j = 0; j < 2 ; j ++){
+					//创建img
+					var img = document.createElement("img");					
+					img.src = 'photo/'+i.toString()+'.jpg';
+					//div中添加img
+					ele.appendChild(img);
+				}
+				//代码片段中添加div
+				fragment.appendChild(ele);
+			}
+			//body里添加代码片段，也可以替换诚你需要的element
+			document.body.appendChild(fragment);
+		}
+		</script>
 </head>
  
-<body bgcolor="#99B7EE">
+<body bgcolor="#99B7EE" >
 	<span id="site_runtime" style="color:#000000; font-size: xx-small;"></span>
 	<div class="div_body"  > 
 	<h1>照片墙</h1>
-        <div class="div_bodyimage" style="margin-left:10%" ><img #image_H400W600 src="photo/01.jpg"  /></div>
-        <div class="col-md-4" ><img #image_H400W600 src="photo/02.jpg"  /></div>
-        <div class="col-md-4" ><img #image_H400W600 src="photo/03.jpg"  /></div>
-    	<div class="col-md-4" ><img #image_H400W600 src="photo/04.jpg"  /></div>
+        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/01.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/02.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/03.jpg"  /></div>
+    	<div class="div_bodyimage" ><img height=220 width=220 src="photo/04.jpg"  /></div>
     
-	    <div class="div_bodyimage" style="margin-left:10%" ><img #image_H400W600 src="photo/05.jpg"  /></div>
-        <div class="div_bodyimage" ><img #image_H400W600 src="photo/06.jpg"  /></div>
-        <div class="div_bodyimage" ><img #image_H400W600 src="photo/07.jpg"  /></div>
-        <div class="div_bodyimage" ><img #image_H400W600 src="photo/08.jpg"  /></div>
+	    <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/05.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/06.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/07.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/08.jpg"  /></div>
         
     
-        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="img/9.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/10.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/11.jpg"  /></div>
-    	<div class="div_bodyimage" ><img height=220 width=220 src="img/12.jpg"  /></div>
+        <div class="div_bodyimage" style="margin-left:10%" ><photo height=220 width=220 src="photo/9.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/10.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/11.jpg"  /></div>
+    	<div class="div_bodyimage" ><img height=220 width=220 src="photo/12.jpg"  /></div>
         
-        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="img/13.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/14.jpg"  /></div>
-    	<div class="div_bodyimage" ><img height=220 width=220 src="img/15.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/16.jpg"  /></div>
-        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="img/17.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/18.jpg"  /></div>
+        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/13.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/14.jpg"  /></div>
+    	<div class="div_bodyimage" ><img height=220 width=220 src="photo/15.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/16.jpg"  /></div>
+        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/17.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/18.jpg"  /></div>
    
-	    <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="img/a4.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/a1.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/a2.jpg"  /></div>
-    	<div class="div_bodyimage" ><img height=220 width=220 src="img/a3.jpg"  /></div>
+	    <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/19.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/20.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/21.jpg"  /></div>
+    	<div class="div_bodyimage" ><img height=220 width=220 src="photo/22.jpg"  /></div>
     	
-	    <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="img/a5.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/a6.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/a7.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/a8.jpg"  /></div>
+	    <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/23.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/24.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/25.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/26.jpg"  /></div>
     	
-        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="img/a9.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="img/a10.jpg"  /></div>
+        <div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/27.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/28.jpg"  /></div>
 	
-		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="imgs/1.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/2.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/3.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/4.jpg"  /></div>
-    	<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="imgs/5.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/6.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/7.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/8.jpg"  /></div>
-    		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="imgs/9.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/10.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/11.jpg"  /></div>
-        <div class="div_bodyimage" ><img height=220 width=220 src="imgs/12.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/29.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/30.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/31.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/32.jpg"  /></div>
+    	<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/33.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/34.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/35.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/36.jpg"  /></div>
+    		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/37.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/38.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/39.jpg"  /></div>
+        <div class="div_bodyimage" ><img height=220 width=220 src="photo/40.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/41.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/42.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/43.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/44.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/45.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/46.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/47.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/48.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/49.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/50.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/51.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/52.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/53.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/54.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/55.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/56.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/57.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/58.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/59.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/60.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/61.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/62.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/63.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/64.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/65.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/66.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/67.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/68.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/69.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/70.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/71.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/72.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/73.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/74.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/75.jpg"  /></div>
+		<div class="div_bodyimage" ><img height=220 width=220 src="photo/76.jpg"  /></div>
+		<div class="div_bodyimage" style="margin-left:10%" ><img height=220 width=220 src="photo/77.jpg"  /></div>
     	
  </div>
  	<!--

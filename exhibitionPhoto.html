@@ -45,7 +45,7 @@ body {
 			for (var i = 0; i < 4; i++) {
 				this.points[i] = new ge1doot.transform3D.Point(
 					parent.pc.x + (face.x[i] * parent.normalZ) + (face.z[i] * parent.normalX),
-					parent.pc.y +  face.y[i],
+					//parent.pc.y + face.y[i],
 					parent.pc.z + (face.x[i] * parent.normalX) + (-face.z[i] * parent.normalZ)
 				);
 			}
@@ -65,11 +65,13 @@ body {
 		);
 		this.visible  = false;
 		this.normalX  = img.nx;
+		this.normalY  = img.ny;
 		this.normalZ  = img.nz;
 		// ---- point center ----
 		this.pc = new ge1doot.transform3D.Point(img.x, img.y, img.z);
 		// ---- target positions ----
 		this.tx = img.x + (img.nx * Math.sqrt(camera.focalLength) * 20);
+		this.ty = img.y + (img.ny * Math.sqrt(camera.focalLength) * 20);
 		this.tz = img.z - (img.nz * Math.sqrt(camera.focalLength) * 20);
 		// ---- create polygons ----
 		this.poly = [];
@@ -97,16 +99,19 @@ body {
 					if (camera.over === camera.target.elem) {
 						// ---- return to the center ----
 						camera.target.x = 0;
+						camera.target.y = 0;
 						camera.target.z = 0;
 						camera.target.elem = false;
 					} else {
 						// ---- goto diapo ----
 						camera.target.elem = camera.over;
 						camera.target.x = camera.over.tx;
+						//camera.target.y = camera.over.ty;
 						camera.target.z = camera.over.tz;
 						// ---- adapt tesselation level to distance ----
 						for (var i = 0, d; d = diapo[i++];) {
 							var dx = camera.target.x - d.pc.x;
+							//var dy = camera.target.y - d.pc.y;
 							var dz = camera.target.z - d.pc.z;
 							var dist = Math.sqrt(dx * dx + dz * dz);
 							var lev = (dist > 1500) ? quality[0] : quality[1];
@@ -258,21 +263,46 @@ body {
 })().load({
 	imgdata:[
 		// north
-		{img:'imgs/01.jpg', x:-1000, y:0, z:1500, nx:0, nz:1},
-		{img:'imgs/02.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
-		{img:'imgs/03.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
+		{img:'photo/78.jpg', x:-1000, y:0, z:1500, nx:0, nz:1},
+		{img:'photo/79.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
+		{img:'photo/80.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
+		{img:'photo/90.jpg', x:-1000,  y:500, z:1500, nx:0, nz:1},
+		{img:'photo/91.jpg', x:0,  y:500, z:1500, nx:0, nz:1},
+		{img:'photo/92.jpg', x:1000,  y:500, z:1500, nx:0, nz:1},
+		{img:'photo/93.jpg', x:-1000,  y:-500, z:1500, nx:0, nz:1},
+		{img:'photo/94.jpg', x:0,  y:-500, z:1500, nx:0, nz:1},
+		{img:'photo/95.jpg', x:1000,  y:-500, z:1500, nx:0, nz:1},
 		// east
-		{img:'imgs/04.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
-		{img:'imgs/05.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
-		{img:'imgs/06.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
+		{img:'photo/81.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
+		{img:'photo/82.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
+		{img:'photo/83.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
+		{img:'photo/96.jpg', x:1500,  y:500, z:1000, nx:-1, nz:0},
+		{img:'photo/97.jpg', x:1500,  y:500, z:0, nx:-1, nz:0},
+		{img:'photo/98.jpg', x:1500,  y:500, z:-1000, nx:-1, nz:0},
+		{img:'photo/99.jpg', x:1500,  y:-500, z:1000, nx:-1, nz:0},
+		{img:'photo/100.jpg', x:1500,  y:-500, z:0, nx:-1, nz:0},
+		{img:'photo/101.jpg', x:1500,  y:-500, z:-1000, nx:-1, nz:0},
 		// south
-		{img:'imgs/7.jpg', x:1000,  y:0, z:-1500, nx:0, nz:-1},
-		{img:'imgs/8.jpg', x:0,     y:0, z:-1500, nx:0, nz:-1},
-		{img:'imgs/9.jpg', x:-1000, y:0, z:-1500, nx:0, nz:-1},
+		{img:'photo/84.jpg', x:1000,  y:0, z:-1500, nx:0, nz:-1},
+		{img:'photo/85.jpg', x:0,     y:0, z:-1500, nx:0, nz:-1},
+		{img:'photo/86.jpg', x:-1000, y:0, z:-1500, nx:0, nz:-1},
+		{img:'photo/102.jpg', x:1000,  y:500, z:-1500, nx:0, nz:-1},
+		{img:'photo/103.jpg', x:0,     y:500, z:-1500, nx:0, nz:-1},
+		{img:'photo/104.jpg', x:-1000, y:500, z:-1500, nx:0, nz:-1},
+		{img:'photo/105.jpg', x:1000,  y:-500, z:-1500, nx:0, nz:-1},
+		{img:'photo/106.jpg', x:0,     y:-500, z:-1500, nx:0, nz:-1},
+		{img:'photo/107.jpg', x:-1000, y:-500, z:-1500, nx:0, nz:-1},
+		
 		// west
-		{img:'imgs/10.jpg', x:-1500, y:0, z:-1000, nx:1, nz:0},
-		{img:'imgs/11.jpg', x:-1500, y:0, z:0, nx:1, nz:0},
-		{img:'imgs/12.jpg', x:-1500, y:0, z:1000, nx:1, nz:0}
+		{img:'photo/87.jpg', x:-1500, y:0, z:-1000, nx:1, nz:0},
+		{img:'photo/88.jpg', x:-1500, y:0, z:0, nx:1, nz:0},
+		{img:'photo/89.jpg', x:-1500, y:0, z:1000, nx:1, nz:0},
+		{img:'photo/108.jpg', x:-1500, y:500, z:-1000, nx:1, nz:0},
+		{img:'photo/109.jpg', x:-1500, y:500, z:0, nx:1, nz:0},
+		{img:'photo/110.jpg', x:-1500, y:500, z:1000, nx:1, nz:0},
+		{img:'photo/111.jpg', x:-1500, y:-500, z:-1000, nx:1, nz:0},
+		{img:'photo/112.jpg', x:-1500, y:-500, z:0, nx:1, nz:0},
+		{img:'photo/113.jpg', x:-1500, y:-500, z:1000, nx:1, nz:0}
 	],
 	structure:[
 		{
